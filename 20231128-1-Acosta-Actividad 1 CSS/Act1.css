@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial; 
+    
+}
+#encabezado {
+    font-size: 30px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    margin: 0; 
+}
+.encabezadoopcion {
+    display: flex;
+    flex-direction: row;
+}
+.narvar {
+    font-size: 15px;
+    background-color: #333;
+    color: white;    
+    text-align: center;
+    line-height: 40px;
+    flex: 1;
+    margin: 0; 
+}
+.Container_Todo{
+    display: flex;
+    flex-direction: row;
+}
+.containerNoticias{ 
+    border: 1px solid grey;
+    margin: 15px;
+    padding: 5px;
+    flex: 1;
+
+}
+#TitularesRojo{
+    color: #ff0000;
+    font-size: 25px;
+}
+#TitularesRojo2{
+    color: #ff0000;
+    font-size: 25px;
+}
+
+#footer{
+    color: white;
+    text-align: center;
+    background-color: #001f3f;
+    bottom: 0;
+    position: fixed;
+}
+
+.NoticiasDer{
+ 
+    margin-right: 20px;
+    padding: 15px;
+    order: 1;
+
+}

@@ -1,0 +1,67 @@
+body {
+    margin: 2px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px; 
+}
+  
+#inicio {
+    margin: 0;
+    margin-right: auto; 
+}
+  
+.narvar {
+    margin: 10px;
+    font-weight: bold;
+    font-size:small
+}
+
+.busquedas{
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 25px;
+    display: grid;
+    grid-template-columns: auto auto ;
+    gap: 55vw;
+   
+}
+.buscador select{
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  font-size:small;
+  padding: 5px;
+  border-radius: 5px;
+  padding: 10px ;
+
+}
+.paginas label {
+    border: 1px solid rgb(213, 210, 210);
+    padding: 5px 5px;
+    font-size:small;
+}
+.productos{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto ;
+    gap: 10px;
+    padding: 25px;
+    
+}
+.tarjeta{
+    border: 1px solid rgb(186, 186, 186);
+    padding-left: 10px;
+    text-align: center;
+}
+.tarjeta img{
+    width: 200px;
+    height: 200px;
+}
+.tarjeta label{
+    color: rgb(0, 123, 255);
+    font-weight: bold;
+    font-size:small 
+}

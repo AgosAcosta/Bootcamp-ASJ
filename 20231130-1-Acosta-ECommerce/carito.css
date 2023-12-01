@@ -1,0 +1,27 @@
+body {
+    margin: 2px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px; 
+}
+  
+#inicio {
+    margin: 0;
+    margin-right: auto; 
+}
+  
+.narvar {
+    padding: 0px;
+    margin: 10px;
+    font-weight: bold;
+    font-size:small
+}
+.compras{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row: auto auto;
+}
