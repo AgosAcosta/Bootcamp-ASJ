@@ -143,7 +143,7 @@ while (num<=100){
 num++;
 } */
 
-//------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------BAR MENU--------------------------------------------------------------------
 /* En un Bar, el cliente puede elegir el producto, puede elegir cuando pedir la CountQueuingStrategy
 buen dia, buenas noches
 cuenta chiste 
@@ -153,7 +153,7 @@ quiere dejar la propina?
 
 if, while, do while,ternario
 */
-
+/* 
 let nombre = prompt("Hola! Como es su nombre?");
 alert(`Bienvenido ${nombre}`);
 let opcion;
@@ -207,4 +207,50 @@ do {
             break;
     }
 
-} while (opcion !== 4); 
+} while (opcion !== 4);  */
+
+//-----------------------------------FOR-----------------------------------------------------------
+/* PIRAMIDE
+el usuario ingresa un numero, se pide crear la siguiente piramide (console.log) hasta dicho numero ingresado 
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+
+*/
+/*  let num = parseInt(prompt('ingresar el numero'));
+
+for(let i=1; i<=num; i++){
+    let linea='';
+    for(let a=1; a<=i; a++){
+        linea = linea + '*';
+    }
+    console.log(linea);
+}
+
+for (let i = num-1; i>0; i--) {
+    let linea = '';
+    for (let a = 1; a <= i; a++) {
+        linea = linea + '*';
+    }
+    console.log(linea);
+}  */
+
+/* FACTORIAL 
+Segun un numero ingresado por el usuario, calcular el factorial:
+Ej:
+Factorial de 5= 5*4*3*2*1 = 120
+*/
+
+/* let num = parseInt(prompt('ingresar el numero'));
+let total=1;
+for(let i=1; i<=num; i++){
+    total= total*i;
+}
+console.log(total);
+ */
