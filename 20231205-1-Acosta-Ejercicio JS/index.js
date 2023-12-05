@@ -92,15 +92,15 @@ Ej: el usuario ingresa el 8, mostrar: (SUMA DE LOS DOS ANTERIORES)
 -diferenciar el uso de let y const
 -validar el dato ingresado
 
-
 */
 let num = Number(prompt("Ingrese un numero"));
 function Fibonacci(){    
     const array = [1,1] // empieza con los dos primeros de la lista 
-    
+
     for(let i=2; i < num; i++){
         array.push(array[i - 2] + array[i-1]) //sumo las dos posiciones anterior del indice actual        
     }
     alert(array);
 }
 Fibonacci();
+
