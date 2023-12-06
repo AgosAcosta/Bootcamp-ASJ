@@ -1,0 +1,49 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-item:hover .nav-link {
+    color: blue;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.img {
+    width: 500%;
+    height: 500%;
+    
+}
+
+.color-box-container {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    margin-right: 5px;
+}
+
+.contador:hover {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+ 
+}
+
+input#cantidad{
+    width: 40px;
+    
+}
+
+button#btn_Agregar {
+    margin: 10px;
+}

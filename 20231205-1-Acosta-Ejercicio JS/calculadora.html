@@ -12,70 +12,75 @@
 
 <body>
     <div class="container">
-        <h3 id="titulo">Calculadora:</h3>
+        <div class="row">
+            <div class="col -2" class="cabecera">
+                <h3 id="titulo">Calculadora:</h3>
+            </div>
+            <div class="col -2" class="cabecera">
+                <span>🌙</span>
+                <input type="checkbox" id="modoOscuro">
+            </div>
+        </div>
         <div class="row">
             <input type="text" name="calculo" id="calculo">
         </div>
         <div class="row">
             <div class="col-3">
-                <button class="boton" id="btn_1" value="btn_1"> 1 </button>
+                <button class="boton" id="btn_1" value="1"> 1 </button>
             </div>
             <div class="col-3">
-                <button class="boton" id="btn_2" value="btn_2"> 2 </button>
+                <button class="boton" id="btn_2" value="2"> 2 </button>
             </div>
             <div class="col-3">
-                <button class="boton" id="btn_3" value="btn_3"> 3 </button>
+                <button class="boton" id="btn_3" value="3"> 3 </button>
             </div>
             <div class="col-3">
-                <button class="boton" id="btn_mas" value="btn_mas"> + </button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-3">
-                <button class="boton" id="btn_4" value="btn_4"> 4 </button>
-            </div>
-            <div class="col-3">
-                <button class="boton" id="btn_5" value="btn_5"> 5 </button>
-            </div>
-            <div class="col-3">
-                <button class="boton" id="btn_6" value="btn_6"> 6 </button>
-            </div>
-            <div class="col-3">
-                <button class="boton" id="btn_menos" value="btn_menos"> - </button>
+                <button class="boton" id="btn_mas" value="+"> + </button>
             </div>
         </div>
         <div class="row">
             <div class="col-3">
-                <button class="boton" id="btn_7" value="btn_7"> 7 </button>
+                <button class="boton" id="btn_4" value="4"> 4 </button>
             </div>
             <div class="col-3">
-                <button class="boton" id="btn_8" value="btn_8"> 8 </button>
+                <button class="boton" id="btn_5" value="5"> 5 </button>
             </div>
             <div class="col-3">
-                <button class="boton" id="btn_9" value="btn_9"> 9 </button>
+                <button class="boton" id="btn_6" value="6"> 6 </button>
             </div>
             <div class="col-3">
-                <button class="boton" id="btn_multiplicacion" value="btn_multiplicacion"> * </button>
+                <button class="boton" id="btn_menos" value="-"> - </button>
             </div>
         </div>
         <div class="row">
             <div class="col-3">
-                <button class="boton" id="btn_0" value="btn_0"> 0 </button>
+                <button class="boton" id="btn_7" value="7"> 7 </button>
+            </div>
+            <div class="col-3">
+                <button class="boton" id="btn_8" value=""> 8 </button>
+            </div>
+            <div class="col-3">
+                <button class="boton" id="btn_9" value="9"> 9 </button>
+            </div>
+            <div class="col-3">
+                <button class="boton" id="btn_multiplicacion" value="*"> * </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <button class="boton" id="btn_0" value="0"> 0 </button>
             </div>
             <div class="col-3">
                 <button class="boton" id="btn_borrar" value="btn_borrar"> AC </button>
             </div>
             <div class="col-3">
-                <button class="boton" id="btn_division" value="btn_division"> / </button>
+                <button class="boton" id="btn_division" value="/"> / </button>
             </div>
             <div class="col-3">
-                <button class="boton" id="btn_igual" value="btn_igual"> = </button>
+                <button class="boton" id="btn_igual" value="="> = </button>
             </div>
         </div>
-
     </div>
-
     <script src="calculadora.js"></script>
 </body>
-
 </html>
