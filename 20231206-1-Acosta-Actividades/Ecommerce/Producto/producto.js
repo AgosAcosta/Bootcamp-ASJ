@@ -30,7 +30,7 @@ btnAgregar.addEventListener("click", () => {
     let precioProducto = document.getElementById("precioProducto").innerText;
     let cantidad = document.getElementById("cantidad");
 
-    let carritoProductos = JSON.parse(localStorage.getItem("carritoProductos")); //? --buscamos los valores y los parseamos
+    let carritoProductos = JSON.parse(localStorage.getItem("carritoProductos"))  || []; //? --buscamos los valores y los parseamos --  || para proporcionar un valor predeterminado
 
     if(parseInt(cantidad.value) >0){
         

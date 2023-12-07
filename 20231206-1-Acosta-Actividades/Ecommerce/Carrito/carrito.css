@@ -5,3 +5,16 @@ body {
 .nav-item:hover .nav-link {
     color: blue;
 }
+
+#carrito .row {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#carrito .row .btn {
+    font-size: 12px;
+}
+
+
+
