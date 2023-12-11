@@ -30,9 +30,12 @@ btnAgregar.addEventListener("click", () => {
     let precioProducto = document.getElementById("precioProducto").innerText;
     let cantidad = document.getElementById("cantidad");
 
-    let carritoProductos = JSON.parse(localStorage.getItem("carritoProductos"))  || []; //? --buscamos los valores y los parseamos --  || para proporcionar un valor predeterminado
 
-    if(parseInt(cantidad.value) >0){
+//recupero los datos guardados en localStorage y lo convierto a objeto
+
+    let carritoProductos = JSON.parse(localStorage.getItem("carritoProductos"))  || []; //? --buscamos los valores y los parseamos --  || [] si no esta vacio lo trae, o puede genrar uno nuevo
+                                                                                        
+    if(parseInt(cantidad.value) > 0){
         
         let carritoProducto = {
             // imagen : imagenProducto,
@@ -43,7 +46,7 @@ btnAgregar.addEventListener("click", () => {
      
          
          carritoProductos.push(carritoProducto); //? --agregamos al final de la lista los productos
-         localStorage.setItem("carritoProductos", JSON.stringify(carritoProductos)); //? --se convierte en array
+         localStorage.setItem("carritoProductos", JSON.stringify(carritoProductos)); //? --seteamos la compra y convierte en objeto el array
          alert("Se agrego con exito al carrito")
     }else{
         alert("Ups! Para comprar debes agregar una cantidad")

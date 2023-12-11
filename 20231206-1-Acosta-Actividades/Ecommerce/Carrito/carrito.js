@@ -54,12 +54,11 @@ function pagar(){
     if(carritoProductos.length > 0){
         alert(" Carrito listo para retirar");
         localStorage.removeItem("carritoProductos");
+
+        location.href= "/Bootcamp-ASJ/20231206-1-Acosta-Actividades/Ecommerce/Carrito/carrito.html" //? -- para que recargue solo
     }else{
         alert("El carrito esta vacio")
     }
-
-
-
 }
 
 
