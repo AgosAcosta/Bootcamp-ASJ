@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <h2>TO DO LIST:</h2>
+  <h6>Agrega la tarea:</h6>
+  <input
+    id="inputValor"
+    type="text"
+    placeholder="Tareas pendientes:"
+    [(ngModel)]="input"
+    (keyup.enter)="agregarLista()"
+  />
+
+  <ul>
+    <li
+      *ngFor="let tarea of tareas; let i = index"
+      class="tareaCompleta"
+      [ngStyle]="{ 'color': tarea.completa ? 'red' : 'black', 'text-decoration-line': tarea.completa ? 'line-through' : 'none' }"
+    >
+      <input type="checkbox" [(ngModel)]="tarea.completa" />
+      {{ tarea.nombre | uppercase }}
+    </li>
+  </ul>
+</div>

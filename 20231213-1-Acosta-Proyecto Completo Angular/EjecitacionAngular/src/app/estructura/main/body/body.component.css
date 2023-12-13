@@ -1,0 +1,15 @@
+.container-fluid{
+    margin-top: 20px;
+
+}
+
+.tareaCompleta{
+    margin-top: 5px;
+    font-size: 25px;
+}
+
+#inputValor{
+   height: 15%;
+   width: 30%;
+}
+
