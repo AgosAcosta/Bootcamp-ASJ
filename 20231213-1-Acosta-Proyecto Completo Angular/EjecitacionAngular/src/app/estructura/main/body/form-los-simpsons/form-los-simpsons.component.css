@@ -1,0 +1,28 @@
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  border: 1px solid grey;
+}
+
+img {
+  height: 10em;
+  width: 10em;
+}
+
+h4 {
+  margin-top: 20px;
+}
