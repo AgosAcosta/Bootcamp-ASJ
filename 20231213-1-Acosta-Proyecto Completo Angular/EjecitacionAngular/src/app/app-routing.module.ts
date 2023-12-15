@@ -4,8 +4,8 @@ import { ToDoListComponent } from './estructura/main/body/to-do-list/to-do-list.
 import { FormLosSimpsonsComponent } from './estructura/main/body/form-los-simpsons/form-los-simpsons.component';
 
 const routes: Routes = [
-  { path: 'ToDoList', component: ToDoListComponent },
-  { path: 'FormularioLosSimpson', component: FormLosSimpsonsComponent },
+  { path: 'To-Do-List', component: ToDoListComponent },
+  { path: 'Formulario-Los-Simpson', component: FormLosSimpsonsComponent },
 ];
 
 @NgModule({

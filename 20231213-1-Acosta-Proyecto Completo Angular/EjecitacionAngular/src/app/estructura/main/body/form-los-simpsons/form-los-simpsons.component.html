@@ -16,13 +16,13 @@
     <h4>LISTADO LOS SIMPSONS</h4>
     <table>
       <thead>
-        <th>IMAGEN</th>
+        <th class="imgContenedor">IMAGEN</th>
         <th>NOMBRE</th>
         <th>ROL</th>
       </thead>
       <tbody>
         <tr *ngFor="let item of formulario">
-          <td><img src="{{item.url }}" alt="PersonajeSimpsons" /></td> 
+          <td class="imgContenedor"><img src="{{item.url }}" alt="PersonajeSimpsons" /></td> 
           <td>{{ item.nombre | uppercase }}</td>
           <td>{{ item.rol | uppercase}}</td>
         </tr>
