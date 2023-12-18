@@ -8,11 +8,10 @@ import { ServiceApiService } from '../../../../Service/service-api.service';
 })
 export class ApiRickAndMortyComponent implements OnInit {
   personajes: any = [];
-  mostrarTabla: boolean = true;
-  personaje: any = {};
+/*   mostrarTabla: boolean = true;
+  personaje: any = {}; */
 
-  constructor(public miServicio: ServiceApiService) {
-    this.miServicio;
+  constructor(private miServicio: ServiceApiService) {
   }
 
   ngOnInit(): void {
