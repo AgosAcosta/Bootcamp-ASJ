@@ -1,0 +1,65 @@
+<h4>Listado de Personajes de Rick and Morty</h4>
+
+<!--TABLA-->
+
+<table *ngIf="mostrarTabla">
+  <thead>
+    <th>Imagen</th>
+    <th>Nombre</th>
+    <th>Estado</th>
+    <th>Opcion</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let personaje of personajes.results; let i = index">
+      <td><img src="{{ personaje.image }}" alt="" width="50px" /></td>
+      <td>{{ personaje.name | uppercase }}</td>
+      <td>{{ personaje.status | uppercase }}</td>
+      <td><button class="btn btn-secondary" routerLink="{{personaje.id}}">Ver</button></td>
+
+<!--       <td>
+
+          <button [routerLink]="['List-Rick-and-Morty',personaje.id]"
+            type="button"
+            class="btn btn-success"
+            (click)="VerPersonaje(i)"
+          >
+            Ver
+          </button>
+
+      </td> -->
+    </tr>
+  </tbody>
+</table>
+
+
+<!--CARD-->
+
+<!--  <div class="card-container" *ngIf="!mostrarTabla">
+  <div class="card">
+    <img
+      src="{{ personaje.image }}"
+      class="card-img-top"
+      alt="{{ personaje.name }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ personaje.name | uppercase }}</h5>
+      <p class="card-text">
+        <strong>Estado:</strong> {{ personaje.status | uppercase }}
+      </p>
+      <p class="card-text"><strong>Especie:</strong> {{ personaje.species }}</p>
+      <p class="card-text"><strong>Género:</strong> {{ personaje.gender }}</p>
+      <p class="card-text">
+        <strong>Ubicación:</strong> {{ personaje.location.name }}
+      </p>
+      <p class="card-text">
+        <strong>Origen:</strong> {{ personaje.origin.name }}
+      </p>
+      <button type="button" class="btn btn-primary" (click)="volverATabla()">
+        Volver
+      </button>
+
+
+    </div>
+  </div>
+</div>
+ -->
