@@ -1,0 +1,60 @@
+
+.row.align-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; 
+  }
+  
+
+  .col-md-7 {
+    padding: 20px; 
+  }
+  
+
+  .col-md-7 h3 {
+    font-size: 1.8rem; 
+    margin-bottom: 20px; 
+  }
+  
+
+  .table {
+    width: 100%;
+    margin-bottom: 20px; 
+  }
+  
+
+  .table th, .table td {
+    text-align: center;
+  }
+  
+
+  tfoot td {
+    font-weight: bold;
+  }
+  
+
+  .btn-outline-success {
+    background-color: #28a745; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem; 
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #218838;
+  }
+  
+
+  .btn-outline-danger {
+    color: #dc3545; 
+    border-color: #dc3545; 
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #dc3545; 
+    color: #fff; 
+  }
