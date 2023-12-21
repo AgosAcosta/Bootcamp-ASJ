@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class CarritoService {
   listCarrito: any = [];
-  total = 0;
+ private total = 0;
   constructor() {}
 
   public getCarrito() {

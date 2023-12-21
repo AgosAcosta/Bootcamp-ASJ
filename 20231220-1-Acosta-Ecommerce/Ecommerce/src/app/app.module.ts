@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/header/navbar/navbar.component';
 import { ProductosComponent } from './components/main/productos/productos.component';
 import { ProductoComponent } from './components/main/productos/producto/producto.component';
-import { CategoriaComponent } from './components/main/categoria/categoria.component';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarritoComponent } from './components/main/carrito/carrito.component';
 
@@ -17,7 +17,7 @@ import { CarritoComponent } from './components/main/carrito/carrito.component';
     NavbarComponent,
     ProductosComponent,
     ProductoComponent,
-    CategoriaComponent,
+
     CarritoComponent
   ],
   imports: [

@@ -41,6 +41,7 @@ export class CarritoComponent implements OnInit {
       }, 2000);
 
       this.carritoService.resetCarrito();
+      this.listCarrito();
     }
   }
   handleImageError(event: Event): void {
