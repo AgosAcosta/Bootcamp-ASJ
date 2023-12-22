@@ -1,0 +1,22 @@
+<p>Creando un nuevo Pipe:</p>
+
+<!-- Crear un pipe, que reciba un arreglo de numeros y devuelva un arreglo con los numeros primos del arreglo recibido.
+Luego deberian mostrar ese arreglo y mostrarlos como un string por pantalla
+Extra: que el pipe creado reciba argumentos para funcionalidades especiales -->
+
+<div class="row">
+  <div class="col-6">
+    <h4>Numeros :</h4>
+    <ul>
+      <li *ngFor="let num of numeros">{{ num }}</li>
+    </ul>
+  </div>
+  <div class="col-6">
+   <h4>Numeros Primos:</h4>
+<ul>
+  <li *ngFor="let primos of numeros |primos">{{ primos }}</li>
+</ul> 
+
+  </div>
+</div>
+

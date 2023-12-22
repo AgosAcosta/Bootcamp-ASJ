@@ -28,6 +28,7 @@ export class ProductComponent implements OnInit {
     });
   }
 
+  //Guardamos en el carrito
   addToCart(): void {
     this.cartService.addItem(this.product);
     this.message = '¡Se agregó el producto al carrito!';
@@ -36,6 +37,8 @@ export class ProductComponent implements OnInit {
       this.message = '';
     }, 2000);
   }
+
+    //Cambio de posicion de imagen
 
   changeImage(value: any): void {
     let currentImage;

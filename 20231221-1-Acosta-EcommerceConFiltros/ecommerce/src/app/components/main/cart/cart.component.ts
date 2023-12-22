@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../../services/cart.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-cart',
@@ -10,20 +11,29 @@ export class CartComponent implements OnInit {
   cartItems: any = [];
   message: string = '';
 
+  countProduct: number = 0;
+
   constructor(public cartService: CartService) {}
 
   ngOnInit(): void {
+    this.cartService.getCartCount().subscribe((count: number) => {
+      this.countProduct = count;
+    });
     this.updateCartItems();
   }
 
+
+  //Actualizacion del carrito
   updateCartItems() {
     this.cartItems = this.cartService.getCartItems();
   }
 
+  //Total del carrito
   getCartTotal() {
     return this.cartService.getCartTotal();
   }
 
+    //Compra del carrito
   processPurchase() {
     const result = confirm('¿Desea realizar esta compra?');
 
@@ -38,6 +48,7 @@ export class CartComponent implements OnInit {
       this.updateCartItems();
     }
   }
+     //Eliminacion del carrito
 
   removeItem(product: any) {
     const result = confirm('¿Desea eliminar este producto?');
@@ -47,7 +58,7 @@ export class CartComponent implements OnInit {
       this.updateCartItems();
     }
   }
-
+     //Error en imagen 
   handleImageError(event: Event): void {
     const imgElement = event.target as HTMLImageElement;
 

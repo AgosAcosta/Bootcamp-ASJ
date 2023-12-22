@@ -16,6 +16,8 @@ import{ToDoListComponent} from './estructura/main/body/to-do-list/to-do-list.com
 import { FormLosSimpsonsComponent } from './estructura/main/body/form-los-simpsons/form-los-simpsons.component';
 import { ApiRickAndMortyComponent } from './estructura/main/body/api-rick-and-morty/api-rick-and-morty.component';
 import { PersonajeComponent } from './estructura/main/body/api-rick-and-morty/personaje/personaje.component';
+import { PipeComponent } from './estructura/main/body/pipe/pipe.component';
+import { PrimePipe } from './estructura/main/body/pipe/pipe.pipe';
 
 
 
@@ -31,6 +33,8 @@ import { PersonajeComponent } from './estructura/main/body/api-rick-and-morty/pe
     FormLosSimpsonsComponent,
     ApiRickAndMortyComponent,
     PersonajeComponent,
+    PipeComponent,
+    PrimePipe,
 
   ],
   imports: [
