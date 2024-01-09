@@ -342,6 +342,7 @@ SELECT name, last_name
 FROM clients
 WHERE id_location IN(SELECT id_location FROM employees)
 
+------------------------------- UNION --------------------------------------------
 
 SELECT name, last_name, 'Vendedores' as TIPO
 FROM employees
@@ -349,3 +350,30 @@ UNION
 SELECT name, last_name, 'Clientes'
 FROM clients
 ORDER BY TIPO
+
+SELECT * FROM products
+
+--Ordenes(numero, fecha,total) cuyo precio total sea mayor al precio promedio de los productos
+
+SELECT number_order 'Numero', date 'Fecha', total 'Total'
+FROM orders
+WHERE total > (SELECT AVG(sale_price)
+				FROM products )
+
+------------------------------- CASE --------------------------------------------
+
+SELECT p.title, p.description, p.sale_price,
+CASE p.id_type
+WHEN 1 THEN 'Música'
+WHEN 2 THEN 'Película'
+WHEN 3 THEN 'Serie'
+END as TIPO
+FROM products p
+
+
+SELECT c.name , c.last_name, 
+CASE c.is_partner
+WHEN 1 THEN 'Socio'
+WHEN 0 THEN 'No Socio'
+END as TIPO
+FROM clients c
