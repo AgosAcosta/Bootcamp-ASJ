@@ -7,54 +7,54 @@ public class Ejercicio9Telefono {
 
 	public static void main(String[] args) {
 	
-	    Scanner scanner = new Scanner(System.in);
-        System.out.println("[2, A, B, C],\r\n"
-                + "[3, D, E, F],\r\n"
-                + "{'G', 'H', 'I', '4'},\r\n"
-                + "{'J', 'K', 'L', '5'},\r\n"
-                + "{'M', 'N', 'O', '6'},\r\n"
-                + "{'P', 'Q', 'R', 'S', '7'},\r\n"
-                + "{'T', 'U', 'V', '8'},\r\n"
-                + "{'W', 'X', 'Y', 'Z', '9'}");
-        
-        ArrayList<Integer> num = new ArrayList<>();
-        int opcion = 0;
-        int numeroActual = 0;
-        int cuantasVeces = 0;
+		
+		//EJEMPLO EJERCICIO URIEL 
+		/*public class phone {
+		    public static void main(String[] args) {
 
-        while(opcion != 1) {
-            System.out.println("Ingrese el numero para escribir la palabra:");
-            numeroActual = scanner.nextInt();
-            switch (numeroActual) {
-                case 1:
-                    opcion = 1;
-                    break;
-                 case 2:
-                     cuantasVeces++;
-                     for(int i=1;i<3;i++) {
-                         num.add(numeroActual);
-                     }
-                 case 3:
+		        Scanner scanner = new Scanner(System.in);
 
-                 case 4:
+		        System.out.println("Ingrese su texto: ");
+		        String text = scanner.nextLine();
+		        String result = Function(text);
+		        System.out.println(result);
+		    }
 
-                 case 5:
+		    public static String Function(String text) {
+		        StringBuilder result = new StringBuilder();
+		        int currentNumber = 0;
+		        int counter = -1;
+		        for (int i = 0; i < text.length(); i++) {
+		            char currentChar = text.charAt(i);
+		            if ((int) currentChar == 32) {
+		                result.append(obtenerChar(currentNumber, counter));
+		                counter = -1;
+		            } else {
+		                currentNumber = Character.getNumericValue(currentChar);
+		                counter++;
+		            }
+		            if (i == text.length() - 1) {
+		                result.append(obtenerChar(currentNumber, counter));
+		            }
+		        }
+		        return result.toString();
+		    }
 
-                 case 6:
+		    public static char obtenerChar(int num, int contador) {
+		        char[][] dictionary = { { ' ' }, { '.' }, { 'a', 'b', 'c' }, { 'd', 'e', 'f' }, { 'g', 'h', 'i' },
+		                { 'j', 'k', 'l' }, { 'm', 'n', 'o' }, { 'p', 'q', 'r', 's' }, { 't', 'u', 'v' },
+		                { 'w', 'x', 'y', 'z' } };
+		        if (num == 7 || num == 9) {
+		            return (dictionary[num][contador % 4]);
+		        } else if (num == 0 || num == 1) {
+		            return (dictionary[num][contador % 1]);
+		        } else {
+		            return (dictionary[num][contador % 3]);
+		        }
+		    }
+		}
 
-                 case 7:
-
-                 case 8:
-
-                 case 9:
-
-            }
-            traducir(num);
-            scanner.close();
-        }
-
-
-
+*/
 
     }
 
