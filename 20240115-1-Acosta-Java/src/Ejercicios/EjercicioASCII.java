@@ -1,6 +1,7 @@
+package Ejercicios;
 import java.util.Scanner;
 
-public class Ejercicio1 {
+public class EjercicioASCII {
 
 	public static void main(String[] args) {
 

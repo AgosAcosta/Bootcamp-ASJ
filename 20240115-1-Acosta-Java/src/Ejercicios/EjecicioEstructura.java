@@ -1,5 +1,6 @@
+package Ejercicios;
 import java.util.Scanner;
-public class Estructuras {
+public class EjecicioEstructura {
 
 	public static void main(String[] args) {
 		
