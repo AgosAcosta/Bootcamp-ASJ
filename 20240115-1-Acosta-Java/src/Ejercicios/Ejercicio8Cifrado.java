@@ -17,32 +17,27 @@ public class Ejercicio8Cifrado {
 		ROT2
 		*/
 		
+		//EJEMPLO DE CIFRADO - FERNANDO
+		/*
+		System.out.println("Ingrese el mensaje :");
         Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Ingrese una palabra: ");
-        String palabra = scanner.nextLine();
-
-        int lugar = 2; 
+        String mensaje = scanner.nextLine();
+        scanner.close();
         
-        String palabraCifrada = cifrar(palabra, lugar);
+        String resultado = "";
+        for(char ch:mensaje.toCharArray()) {
+            if(ch!=' ') {
+                int posicionAlfabeticaOriginal = ch - 'a';
+                int posicionAlfabeticaNueva = (posicionAlfabeticaOriginal+3)%27;
+                char nuevoCaracter = (char) ('a'+posicionAlfabeticaNueva);
+                resultado+=nuevoCaracter;
+            }else {
+                resultado+=ch;
+            }
+        }
+        System.out.println("Mensaje cifrado:" + resultado);
         
-        System.out.println("La palabra cifrada es:" + palabraCifrada);
-    
-    }
-
-   private static String cifrar(String palabra, int lugar) {
-	   
-	   String resultado = "";
-       for (int i = 0; i < palabra.length(); i++) {
-           char letra = palabra.charAt(i);
-           
-           if (Character.isLetter(letra)) {
-        	   char cifrado = (char) (((letra + lugar) % 26));
-        	   resultado += cifrado;
-           }
-       }
-	return resultado;
-  
-   }
+        */
+	}
 
 }
