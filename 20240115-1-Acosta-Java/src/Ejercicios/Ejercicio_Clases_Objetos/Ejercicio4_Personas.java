@@ -94,7 +94,7 @@ public class Ejercicio4_Personas {
 		
 	}
 	
-	public char comprobarSexo(char sexo) {		
+	private char comprobarSexo(char sexo) {		
 		 if (sexo == 'H' || sexo == 'M') {
 	            return sexo;
 	        } else {

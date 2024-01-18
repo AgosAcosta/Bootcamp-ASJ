@@ -18,29 +18,30 @@ public class Main {
 
 		// EJERCICIO 2:
 
-		Ejercicio2_Cuenta cuenta = new Ejercicio2_Cuenta("Pepito");
-		cuenta.ingresarCantidad();
-		cuenta.retirarCantidad();		
-		System.out.println(cuenta);
-		
-		System.out.print("Ingrese el Nombre del titular: ");
-		String nombre = scanner.nextLine();		
-		Ejercicio2_Cuenta cuenta1 = new Ejercicio2_Cuenta(nombre);
-		cuenta1.ingresarCantidad();
-		cuenta1.retirarCantidad();		
-		System.out.println(cuenta);
+//		Ejercicio2_Cuenta cuenta = new Ejercicio2_Cuenta("Pepito");
+//		cuenta.ingresarCantidad();
+//		cuenta.retirarCantidad();		
+//		System.out.println(cuenta);
+//		
+//		System.out.print("Ingrese el Nombre del titular: ");
+//		String nombre = scanner.nextLine();		
+//		Ejercicio2_Cuenta cuenta1 = new Ejercicio2_Cuenta(nombre);
+//		cuenta1.ingresarCantidad();
+//		cuenta1.retirarCantidad();		
+//		System.out.println(cuenta);
 
 		// EJERCICIO 3:
 
-		System.out.print("Ingrese la longitud para la contraseña aleatoria: ");
-		int longitud = scanner.nextInt();
-		Ejercicio3_Password password = new Ejercicio3_Password(longitud, "");
-
-		password.generarPassword();
-
-		System.out.println(
-				"Contraseña Aleatoria: " + password.getContrasena() + (password.esFuerte() ? " FUERTE" : " DEBIL"));
-
+//		System.out.print("Ingrese la longitud para la contraseña aleatoria: ");
+//		int longitud = scanner.nextInt();
+//		Ejercicio3_Password password = new Ejercicio3_Password(longitud, "");
+//
+//		password.generarPassword();
+//
+//		System.out.println(
+//				"Contraseña Aleatoria: " + password.getContrasena() + (password.esFuerte() ? " FUERTE" : " DEBIL"));
+		
+		
 		// EJERCICIO 4:
 
 //		System.out.println("Ingrese los datos de la primera persona: ");
