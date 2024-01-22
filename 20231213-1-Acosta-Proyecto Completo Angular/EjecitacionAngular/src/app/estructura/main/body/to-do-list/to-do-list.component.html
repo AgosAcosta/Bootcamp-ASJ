@@ -1,41 +1,100 @@
 <div class="container-fluid">
-    <h2>TO DO LIST:</h2>
-    <h6>Agrega la tarea:</h6>
-    <input
-      id="inputValor"
-      type="text"
-      placeholder="Tareas pendientes:"
-      [(ngModel)]="input"
-      (keyup.enter)="agregarLista()"
-    />
-    <button type="button" class="btn btn-primary" (click)="TareasPendientes()">
-      Pendientes
-    </button>
-    <button type="button" class="btn btn-success" (click)="TareasCompletas()">
-      Completas
-    </button>
-    <button type="button" class="btn btn-danger" (click)="TareasEliminadas()">
-      Eliminadas
-    </button>
-    <ul>
-      <li
-        *ngFor="let tarea of tareas; let i = index"
-        class="tareaCompleta"
-        [ngStyle]="{
-          color: tarea.completa ? 'red' : 'black',
-          'text-decoration-line': tarea.completa ? 'line-through' : 'none'
-        }"
-      >
-        <input type="checkbox" [(ngModel)]="tarea.completa" />
-        {{ tarea.nombre | uppercase }}
+  <h2>TO DO LIST:</h2>
+  <div class="row">
+    <div class="col-5 tarea-formulario">
+      <h6>Agregar tarea:</h6>
+      <label for="name">Nombre</label>
+      <input
+        type="text"
+        placeholder="Nombre"
+        [(ngModel)]="tarea.nombre"
+        class="form-control"
+      /><br />
+      <label for="descripcion">Descripción</label>
+      <textarea
+        placeholder="Descripción"
+        [(ngModel)]="tarea.descripcion"
+        class="form-control"
+      ></textarea>
+      <button type="button" class="btn btn-primary" (click)="Agregar()">
+        Guardar
+      </button>
+    </div>
+
+    <div class="col-7">
+      <div class="botones-filtro">
         <button
           type="button"
-          class="btn btn-danger btn-sm"
-          (click)="eliminarTarea(i)"
+          class="btn btn-primary"
+          (click)="todasLasTareas()"
         >
-          Eliminar
+          Todas
         </button>
-      </li>
-    </ul>
-  </div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="cargarTareasPorEstado('Pendiente')"
+        >
+          Pendientes
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="cargarTareasPorEstado('Completa')"
+        >
+          Completas
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="cargarTareasPorEstado('Eliminada')"
+        >
+          Eliminadas
+        </button>
+      </div>
+      <h6>Listado de tareas:</h6>
 
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tarea of tareas; let i = index">
+            <td>{{ tarea.nombre }}</td>
+            <td>{{ tarea.descripcion }}</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-success btn-sm"
+                (click)="editarTarea(tarea)"
+                ngbTooltip="Editar"
+              >
+                <i class="bi bi-pencil-square"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-success btn-sm"
+                (click)="finalizarTarea(tarea)"
+                ngbTooltip="Finalizar"
+              >
+                <i class="bi bi-check2-square"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                (click)="eliminarTarea(tarea)"
+                ngbTooltip="Eliminar"
+              >
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

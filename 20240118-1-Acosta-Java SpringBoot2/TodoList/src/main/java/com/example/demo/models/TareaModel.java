@@ -18,13 +18,13 @@ public class TareaModel {
 	private Integer id;
 	private String nombre;
 	private String descripcion;
-	private boolean estado;
+	private String estado;
 
 	public TareaModel() {
 
 	}
 
-	public TareaModel(int id, String nombre, String descripcion, boolean estado) {
+	public TareaModel(int id, String nombre, String descripcion, String estado) {
 		this.id = id;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
@@ -55,12 +55,14 @@ public class TareaModel {
 		this.descripcion = descripcion;
 	}
 
-	public boolean isEstado() {
+	public String getEstado() {
 		return estado;
 	}
 
-	public void setEstado(boolean estado) {
+	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+
+
 
 }

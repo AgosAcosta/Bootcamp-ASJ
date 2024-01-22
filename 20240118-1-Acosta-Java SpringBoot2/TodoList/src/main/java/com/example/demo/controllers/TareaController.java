@@ -6,6 +6,7 @@ import com.example.demo.models.TareaModel;
 import com.example.demo.services.TareaService;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,8 +27,7 @@ public class TareaController {
 	TareaService tareaService;
 
 	@GetMapping("/test")
-	public ResponseEntity<String> testing() {
-		
+	public ResponseEntity<String> testing() {		
 		return ResponseEntity.ok("Hola!");
 		//return new ResponseEntity<>("Hola!",HttpStatus.OK);
 	}
@@ -38,23 +38,23 @@ public class TareaController {
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<List<TareaModel>>getTareasById(@PathVariable int id) {
-		return ResponseEntity.ok(null);
+	public ResponseEntity<Optional<TareaModel>> getTareasById(@PathVariable int id) {
+		return  ResponseEntity.ok(tareaService.obtenerTareasPorId(id));
 	}
 	
 	@PostMapping()
-	public ResponseEntity<String> createTarea(@RequestBody TareaModel tarea) {
-		return ResponseEntity.ok(null);
+	public TareaModel createTarea(@RequestBody TareaModel tarea) {
+	    return tareaService.crearTarea(tarea);
 	}
 	
 	@PutMapping("/{id}")
 	public ResponseEntity<String> updateTarea(@PathVariable int id, @RequestBody TareaModel tarea) {
-		return ResponseEntity.ok(null);
+		return ResponseEntity.ok(tareaService.modificarTarea(id, tarea));
 	}
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<String> deleteTarea(@PathVariable int id) {
-		return ResponseEntity.ok(null);
+		return ResponseEntity.ok(tareaService.eliminarTarea(id));
 	}
 	
 }

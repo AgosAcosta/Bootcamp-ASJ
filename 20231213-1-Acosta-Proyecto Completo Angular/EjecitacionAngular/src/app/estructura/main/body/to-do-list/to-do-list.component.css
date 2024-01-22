@@ -1,16 +1,25 @@
 .container-fluid {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.tareaCompleta {
-  margin-top: 5px;
-  font-size: 25px;
+.tarea-formulario {
+  padding: 15px;
+  border-radius: 8px;
 }
 
-#inputValor {
-  height: 15%;
-  width: 30%;
+.form-control {
+  margin-bottom: 10px;
 }
-.btn {
-  margin: 10px;
+
+.botones-filtro button {
+  margin-right: 10px;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.table td:last-child button {
+  margin-right: 5px;
 }
