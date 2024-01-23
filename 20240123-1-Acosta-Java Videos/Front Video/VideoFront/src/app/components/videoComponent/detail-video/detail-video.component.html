@@ -1,0 +1,27 @@
+<div class="container-fluid" id="container">
+  <div class="row video-details">
+    <h3>{{ video?.nombre }}</h3>
+  </div>
+  <div class="row video-details">
+    <iframe
+      [src]="getSafeUrl()"
+      frameborder="0"
+      width="100%"
+      height="300"
+    ></iframe>
+  </div>
+  <div class="row video-details">
+    <p>{{ video?.descripcion }}</p>
+    <p>Vistas: {{ video?.cantidadVistas }}</p>
+    <div class="col">
+      <button (click)="like(video?.id)" [disabled]="flagLike">
+        <i class="bi bi-hand-thumbs-up"></i>
+      </button>
+      <span>{{ video?.cantidadMeGusta }}</span>
+      <button (click)="dislike(video?.id)" [disabled]="flagDislike">
+        <i class="bi bi-hand-thumbs-down"></i>
+      </button>
+      <span>{{ video?.cantidadNoMeGusta }}</span>
+    </div>
+  </div>
+</div>

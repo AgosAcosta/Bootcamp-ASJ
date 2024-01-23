@@ -1,0 +1,54 @@
+<div class="container-fluid" id="container">
+  <div class="row mb-3">
+    <div class="col-md-12 text-center">
+      <a [routerLink]="['/new']" class="btn btn-outline-success mx-2">Nuevo Video</a>
+      <input
+        type="text"
+        name="buscar"
+        id="buscar"
+        [(ngModel)]="buscar"
+        placeholder="Filtrar"
+      />
+      <button (click)="filtarNombre(buscar)">
+        <i class="bi bi-search"></i>
+      </button>
+      <select
+        name="categoria"
+        id="categoria"
+        [(ngModel)]="video.categoria"
+        (change)="filtrarPorCategoria(video.categoria)"
+      >
+        <option value="" selected>Categorías</option>
+        <option *ngFor="let c of obtenerCategorias()" [value]="c">
+          {{ c }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-3" *ngFor="let video of videos">
+      <div class="my-form">
+        <img src="https://endlessicons.com/wp-content/uploads/2012/10/youtube-icon-614x460.png" alt="" />
+        <div class="card-body">
+          <h5 class="card-title">
+            <a [routerLink]="[video.id]">{{ video.nombre }}</a>
+          </h5>
+          <p class="card-text">Categoría: {{ video.categoria }}</p>
+          <p class="card-text">Vistas: {{ video.cantidadVistas }}</p>
+          <button
+            class="btn btn-outline-success mx-2"
+            [routerLink]="[video.id]"
+          >
+            <i class="bi bi-eye-fill"></i>
+          </button>
+          <button
+            class="btn btn-outline-danger mx-2"
+            (click)="deleteVideo(video.id)"
+          >
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
