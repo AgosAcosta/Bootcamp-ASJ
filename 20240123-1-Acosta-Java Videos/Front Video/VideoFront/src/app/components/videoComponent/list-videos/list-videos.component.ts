@@ -72,4 +72,11 @@ export class ListVideosComponent implements OnInit {
     ];
     return categoriasUnicas;
   }
+
+  cancelar() {
+    this.buscar = '';
+    this.video.categoria = '';
+    this.cargarLista();
+    this.obtenerCategorias();
+  }
 }

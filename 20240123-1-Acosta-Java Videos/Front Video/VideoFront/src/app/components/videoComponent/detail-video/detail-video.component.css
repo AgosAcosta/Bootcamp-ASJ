@@ -15,7 +15,7 @@
 }
 
 .my-form {
-  max-width: 400px;
+  max-width: 800px; /* Ajusta el ancho del formulario según tus necesidades */
   margin: auto;
   padding: 20px;
   background-color: #212121;
@@ -23,6 +23,11 @@
   border: 1px solid #484848;
   border-radius: 8px;
   margin-top: 20px;
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
 }
 
 .form-group {
@@ -43,12 +48,7 @@ label {
   box-sizing: border-box;
 }
 
-.btn-success {
-  width: 100%;
-  background-color: #4caf50;
-  color: #fff;
-  border: 1px solid #4caf50;
-  border-radius: 4px;
-  padding: 10px;
-  cursor: pointer;
+.col button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
 }

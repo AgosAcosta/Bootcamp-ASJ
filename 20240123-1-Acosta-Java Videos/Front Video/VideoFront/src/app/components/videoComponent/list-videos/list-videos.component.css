@@ -1,6 +1,6 @@
 #container {
   background-color: #212121;
-  height: 100vh;
+  height: auto;
   padding: 20px;
 }
 
@@ -14,13 +14,13 @@
 }
 
 .my-form {
-  max-width: 100%; /* Ajustar al 100% del ancho del contenedor padre */
   margin: auto;
   padding: 20px;
   background-color: #212121;
   color: #fff;
   border: 1px solid #484848;
   border-radius: 8px;
+  text-align: center;
 }
 
 .my-form img {
@@ -29,13 +29,8 @@
   border-radius: 8px;
 }
 
-.card-body {
-  display: flex;
-  flex-direction: column; /* Alinea los elementos en columna */
-}
-
 .card-body button {
-  margin-top: 10px; /* Agregar un margen superior entre los botones y el texto */
+  margin-top: 10px;
 }
 
 #container input[type="text"],
@@ -48,5 +43,3 @@
   padding: 8px;
   margin-right: 5px;
 }
-
-
